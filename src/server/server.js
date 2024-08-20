@@ -18,8 +18,7 @@ app.use(bodyParser.json());
 const cors = require("cors");
 app.use(cors());
 // Initialize the main project folder
-app.use(express.static("website"));
-
+app.use(express.static("dist"));
 // Setup Server
 const port = 3000;
 /* Spin up the server*/
@@ -28,6 +27,9 @@ function listening() {
   // console.log(server);
   console.log(`running on localhost: ${port}`);
 }
+app.get("/", function (request, response) {
+  response.sendFile("dist/index.html");
+});
 app.get("/all", function (request, response) {
   response.send(projectData);
 });
