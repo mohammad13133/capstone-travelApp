@@ -37,7 +37,7 @@ To run this project, make sure to create a `.env` file with your API keys:
 geonamesKey=your_geonames_key
 pixabayKey=your_pixabay_key
 weatherbitKey=your_weatherbit_key
-
+```
 
 5.start server
 
@@ -52,7 +52,5 @@ npm start
 ```
 
 npm run build-dev
-
-```
 
 ```
