@@ -1,44 +1,53 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <title>Weather Journal</title>
-    <link
-      href="https://fonts.googleapis.com/css?family=Oswald:400,600,700|Ranga:400,700&display=swap"
-      rel="stylesheet"
-    />
-    <link rel="stylesheet" href="style.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Travel Planner</title>
   </head>
   <body>
-    <div id="app">
-      <div class="holder headline">Weather Journal App</div>
-      <div class="info">
-        <div class="holder city">
-          <label for="city">Enter city name here</label>
-          <input type="text" id="city" placeholder="enter city name here" />
-        </div>
-        <div class="holder country">
-          <label for="country">Enter country name(PS)</label>
-          <input type="text" id="country" placeholder="enter country name" />
-        </div>
+    <div class="travel-planner" id="travel-planner">
+      <h1>Travel Planner</h1>
+      <div id="travel-cont">
+        <!-- <div class="trip-card">
+          <img
+            src="https://via.placeholder.com/150"
+            alt="Paris, France"
+            class="trip-image"
+          />
+          <div class="trip-details">
+            <p><strong>My trip to:</strong> Paris, France</p>
+            <p><strong>Departing:</strong> 02/12/2020</p>
+            <div class="trip-buttons">
+              <button class="save-trip">Save Trip</button>
+              <button class="remove-trip">Remove Trip</button>
+            </div>
+            <p class="trip-info">Paris, France is 220 days away</p>
+            <p class="trip-weather">
+              Typical weather for then is:<br />
+              High - 46, Low - 35<br />
+              Mostly cloudy throughout the day.
+            </p>
+          </div>
+        </div> -->
       </div>
-      <div class="holder feel">
-        <label for="feelings">How are you feeling today?</label>
-        <textarea
-          class="myInput"
-          id="feelings"
-          placeholder="Enter your feelings here"
-          rows="9"
-          cols="50"
-        ></textarea>
-        <button id="generate" type="submit">Generate</button>
-      </div>
-      <div class="holder entry">
-        <div id="entryHolder">
-          <div id="date"></div>
-          <div id="temp"></div>
-          <div id="content"></div>
+
+      <div class="add-trip">
+        <div class="add-trip-element">
+          <label for="trip-city">Add Trip</label>
+          <input
+            type="text"
+            id="trip-city"
+            name="trip-city"
+            placeholder="Enter trip city"
+          />
+          <p id="location"></p>
         </div>
+        <div class="add-trip-element">
+          <label for="trip-date">Add Date</label>
+          <input type="date" id="trip-date" name="trip-date" />
+        </div>
+        <button class="add-trip-button" id="add-trip-button">add</button>
       </div>
     </div>
   </body>

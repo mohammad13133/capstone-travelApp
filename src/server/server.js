@@ -1,45 +1,65 @@
 // Setup empty JS object to act as endpoint for all routes
-projectData = {};
-
+let tripsData = [];
+let id = 0;
 // Require Express to run server and routes
 var express = require("express");
 var app = express();
 
-// Start up an instance of app
-
 /* Middleware*/
 const bodyParser = require("body-parser");
 
-//Here we are configuring express to use body-parser as middle-ware.
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
 
 // Cors for cross origin allowance
 const cors = require("cors");
 app.use(cors());
+
 // Initialize the main project folder
 app.use(express.static("dist"));
+
 // Setup Server
 const port = 3000;
-/* Spin up the server*/
 const server = app.listen(port, listening);
 function listening() {
-  // console.log(server);
   console.log(`running on localhost: ${port}`);
 }
+
 app.get("/", function (request, response) {
   response.sendFile("dist/index.html");
 });
-app.get("/all", function (request, response) {
-  response.send(projectData);
+app.delete("/delete/:id", function (request, response) {
+  const tripId = parseInt(request.params.id, 10);
+  const index = tripsData.findIndex((trip) => trip.id === tripId);
+
+  if (index !== -1) {
+    tripsData.splice(index, 1);
+    response.send({ message: "Trip deleted" });
+    console.log("DELETE request received, trip deleted:", tripId);
+  } else {
+    response.status(404).send({ message: "Trip not found" });
+  }
 });
+
+app.get("/all", function (request, response) {
+  response.send(tripsData);
+});
+
 app.post("/add", function (request, response) {
-  const { temperature, date, userResponse } = request.body;
+  id++;
+  const trip = {
+    id,
+    city: request.body.city,
+    country: request.body.country,
+    latitude: request.body.latitude,
+    longitude: request.body.longitude,
+    date: request.body.date,
+  };
 
-  projectData.temperature = temperature;
-  projectData.date = date;
-  projectData.userResponse = userResponse;
+  // Add the new trip to the tripsData array
+  tripsData.push(trip);
 
-  response.send(projectData);
-  console.log("POST request received", projectData);
+  // Respond with the updated trips array
+  response.send(trip);
+  console.log("POST request received, trip saved:", trip);
 });

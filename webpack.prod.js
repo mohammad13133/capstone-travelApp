@@ -1,8 +1,16 @@
 const path = require("path");
 const webpack = require("webpack");
+const Dotenv = require("dotenv-webpack");
+
 const HtmlWebPackPlugin = require("html-webpack-plugin");
 module.exports = {
+  mode: "production",
   entry: "./src/client/index.js",
+  output: {
+    libraryTarget: "var",
+    library: "Client",
+  },
+
   module: {
     rules: [
       {
@@ -16,6 +24,10 @@ module.exports = {
     new HtmlWebPackPlugin({
       template: "./src/client/views/index.html",
       filename: "./index.html",
+    }),
+    new Dotenv({
+      path: "./.env", // Path to your .env file
+      systemvars: true, // Load system variables as well
     }),
   ],
 };
