@@ -4,10 +4,15 @@ body {
   padding: 0;
   display: flex;
   justify-content: center;
-  align-items: flex-start; /* Changed from center to flex-start */
+  align-items: flex-start;
   height: 100vh;
   background-color: #f8f8f8;
-  overflow-y: auto; /* Added to allow scrolling */
+  background-image: url("../assets/images/travel.jpeg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  overflow-y: auto;
 }
 
 .travel-planner {
@@ -30,14 +35,13 @@ h1 {
 .trip-card {
   display: flex;
   padding: 16px;
-
   background-color: #fff;
   border-bottom: 1px solid #ddd; /* Added border to separate trip cards */
 }
 
 .trip-image {
   width: 150px;
-  height: auto;
+  height: 150px;
   border-radius: 8px;
   margin-right: 16px;
 }
@@ -103,5 +107,48 @@ h1 {
     background-color: #4caf50;
     margin-top: 10px;
     color: white;
+  }
+}
+
+.list {
+  display: flex;
+  align-items: start;
+  flex-wrap: wrap;
+  .list-item {
+    background-color: #e4e4e4;
+    border-radius: 10px;
+    display: flex;
+    flex: 0 0 auto;
+    width: auto;
+    align-items: center;
+    margin-left: 6px;
+    margin-right: 6px;
+    padding-left: 6px;
+    padding-right: 6px;
+    margin-top: 5px;
+    p {
+      display: flex;
+      align-items: center;
+      span {
+        background-color: white;
+        padding-left: 5px;
+        padding-right: 5px;
+        margin-left: 10px;
+        margin-right: 3px;
+        border-radius: 50%;
+      }
+    }
+  }
+}
+#add-item {
+  cursor: pointer;
+}
+@media (max-width: 480px) {
+  .travel-planner {
+    width: 300px;
+  }
+  .trip-card {
+    flex-direction: column;
+    align-items: center;
   }
 }

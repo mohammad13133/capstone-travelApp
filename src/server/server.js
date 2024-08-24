@@ -1,17 +1,18 @@
 // Setup empty JS object to act as endpoint for all routes
 let tripsData = [];
 let id = 0;
+
 // Require Express to run server and routes
 var express = require("express");
 var app = express();
 
-/* Middleware*/
+/* Middleware */
 const bodyParser = require("body-parser");
 
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
 
-// Cors for cross origin allowance
+// Cors for cross-origin allowance
 const cors = require("cors");
 app.use(cors());
 
@@ -28,6 +29,7 @@ function listening() {
 app.get("/", function (request, response) {
   response.sendFile("dist/index.html");
 });
+
 app.delete("/delete/:id", function (request, response) {
   const tripId = parseInt(request.params.id, 10);
   const index = tripsData.findIndex((trip) => trip.id === tripId);
@@ -54,12 +56,33 @@ app.post("/add", function (request, response) {
     latitude: request.body.latitude,
     longitude: request.body.longitude,
     date: request.body.date,
+    endDate: request.body.endDate,
+    list: request.body.list, // Initialize the to-do list
   };
 
   // Add the new trip to the tripsData array
   tripsData.push(trip);
 
-  // Respond with the updated trips array
+  // Respond with the added trip
   response.send(trip);
   console.log("POST request received, trip saved:", trip);
+});
+
+// New PUT endpoint to update the trip
+app.put("/update/:id", function (request, response) {
+  const tripId = parseInt(request.params.id, 10);
+  const index = tripsData.findIndex((trip) => trip.id === tripId);
+
+  if (index !== -1) {
+    // Update the trip with new data
+    tripsData[index] = {
+      ...tripsData[index],
+      ...request.body, // Overwrite with new data
+    };
+
+    response.send(tripsData[index]);
+    console.log("PUT request received, trip updated:", tripsData[index]);
+  } else {
+    response.status(404).send({ message: "Trip not found" });
+  }
 });

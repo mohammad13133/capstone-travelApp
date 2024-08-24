@@ -4,53 +4,70 @@
 
 The travel-planner App is the final project for the Udacity Front-End Nanodegree. This travel planning app allows users to input a desired trip location and date, then provides real-time weather forecasts and an image of the destination using data from external APIs.
 
-## downlaod and run the project
+## Technologies Used
 
-1.first you need to clone the repo
+### Node.js
 
-```
-git clone https://github.com/mohammad13133/capstone-travelApp.git
-```
+Node.js is used for setting up the server and handling backend logic.
 
-2.install depandancies
+![Node.js Logo](https://upload.wikimedia.org/wikipedia/commons/d/d9/Node.js_logo.svg)
 
-```
-npm install
-```
+### Webpack
 
-3.make the dist file
+Webpack is used as the module bundler for managing and optimizing the project files.
 
-```
-npx webpack --config webpack.dev.js
-```
+![Webpack Logo](https://upload.wikimedia.org/wikipedia/commons/9/94/Webpack.svg)
 
-4.create .env file for your apis keys
-This project uses the following API services:
+### SCSS
 
-1. [GeoNames API](http://www.geonames.org/)
-2. [Pixabay API](https://pixabay.com/api/docs/)
-3. [Weatherbit API](https://www.weatherbit.io/api)
+SCSS is used for styling the application with more powerful and structured CSS.
 
-To run this project, make sure to create a `.env` file with your API keys:
+![SCSS Logo](https://upload.wikimedia.org/wikipedia/commons/9/96/Sass_Logo_Color.svg)
 
-```plaintext
-geonamesKey=your_geonames_key
-pixabayKey=your_pixabay_key
-weatherbitKey=your_weatherbit_key
-```
+## Download and Run the Project
 
-5.start server
+1. First, clone the repository:
 
-```
+   ```bash
+   git clone https://github.com/mohammad13133/capstone-travelApp.git
+   ```
 
-npm start
+2. Install dependencies:
 
-```
+   ```bash
+   npm install
+   ```
 
-6.start webpack
+3. Create the `dist` file using Webpack:
 
-```
+   ```bash
+   npx webpack --config webpack.dev.js
+   ```
 
-npm run build-dev
+4. Create a `.env` file for your API keys:
 
-```
+   This project uses the following API services:
+
+   - [GeoNames API](http://www.geonames.org/)
+   - [Pixabay API](https://pixabay.com/api/docs/)
+   - [Weatherbit API](https://www.weatherbit.io/api)
+
+   To run this project, make sure to create a `.env` file with your API keys:
+
+   ```plaintext
+   geonamesKey=your_geonames_key
+   pixabayKey=your_pixabay_key
+   weatherbitKey=your_weatherbit_key
+   ```
+
+5. Start the server:
+
+   ```bash
+   npm start
+   ```
+
+6. Start Webpack:
+
+   ```bash
+   npm run build-dev
+   ```

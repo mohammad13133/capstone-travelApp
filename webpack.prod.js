@@ -30,4 +30,8 @@ module.exports = {
       systemvars: true, // Load system variables as well
     }),
   ],
+  output: {
+    libraryTarget: "var",
+    library: "Client",
+  },
 };
