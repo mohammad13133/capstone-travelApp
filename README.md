@@ -24,6 +24,10 @@ SCSS is used for styling the application with more powerful and structured CSS.
 
 <img src="https://upload.wikimedia.org/wikipedia/commons/9/96/Sass_Logo_Color.svg" alt="SCSS Logo" width="200"/>
 
+## Video Demonstration
+
+Watch the video demonstration of the project [here](https://drive.google.com/drive/u/0/my-drive?q=type:video%20parent:0ABAyedROuJbAUk9PVA).
+
 ## Download and Run the Project
 
 1. First, clone the repository:
