@@ -26,7 +26,7 @@ SCSS is used for styling the application with more powerful and structured CSS.
 
 ## Video Demonstration
 
-Watch the video demonstration of the project [here](https://drive.google.com/drive/u/0/my-drive?q=type:video%20parent:0ABAyedROuJbAUk9PVA).
+Watch the video demonstration of the project [here](https://drive.google.com/file/d/16ZTx0YPJK4WwTr6Y5Ut8U8Tixd5_b1JC/view?usp=sharing).
 
 ## Download and Run the Project
 
