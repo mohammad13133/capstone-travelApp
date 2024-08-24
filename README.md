@@ -10,19 +10,19 @@ The travel-planner App is the final project for the Udacity Front-End Nanodegree
 
 Node.js is used for setting up the server and handling backend logic.
 
-![Node.js Logo](https://upload.wikimedia.org/wikipedia/commons/d/d9/Node.js_logo.svg)
+<img src="https://upload.wikimedia.org/wikipedia/commons/d/d9/Node.js_logo.svg" alt="Node.js Logo" width="100"/>
 
 ### Webpack
 
 Webpack is used as the module bundler for managing and optimizing the project files.
 
-![Webpack Logo](https://upload.wikimedia.org/wikipedia/commons/9/94/Webpack.svg)
+<img src="https://upload.wikimedia.org/wikipedia/commons/9/94/Webpack.svg" alt="Webpack Logo" width="100"/>
 
 ### SCSS
 
 SCSS is used for styling the application with more powerful and structured CSS.
 
-![SCSS Logo](https://upload.wikimedia.org/wikipedia/commons/9/96/Sass_Logo_Color.svg)
+<img src="https://upload.wikimedia.org/wikipedia/commons/9/96/Sass_Logo_Color.svg" alt="SCSS Logo" width="100"/>
 
 ## Download and Run the Project
 
