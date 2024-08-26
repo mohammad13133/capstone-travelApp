@@ -27,7 +27,7 @@ function listening() {
 }
 
 app.get("/", function (request, response) {
-  response.sendFile("dist/index.html");
+  response.sendFile(path.join(__dirname, "dist", "index.html"));
 });
 
 app.delete("/delete/:id", function (request, response) {
