@@ -1,6 +1,7 @@
 const path = require("path");
 const webpack = require("webpack");
 const Dotenv = require("dotenv-webpack");
+const WorkboxPlugin = require("workbox-webpack-plugin");
 
 const HtmlWebPackPlugin = require("html-webpack-plugin");
 module.exports = {
@@ -29,6 +30,7 @@ module.exports = {
       path: "./.env", // Path to your .env file
       systemvars: true, // Load system variables as well
     }),
+    new WorkboxPlugin.GenerateSW(),
   ],
   output: {
     libraryTarget: "var",
