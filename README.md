@@ -2,7 +2,12 @@
 
 ## Overview
 
-The travel-planner App is the final project for the Udacity Front-End Nanodegree. This travel planning app allows users to input a desired trip location and date, then provides real-time weather forecasts and an image of the destination using data from external APIs.
+The travel-planner App is the final project for the Udacity Front-End Nanodegree, helping me achieve my degree. This travel planning app allows users to input a desired trip location and date, then provides real-time weather forecasts and an image of the destination using data from external APIs.
+
+## Certificate
+
+Check out my Udacity Nanodegree certificate [here](https://www.udacity.com/certificate/e/7e0b18f4-0cbc-11ef-96d0-1ffe49edd593).
+
 
 ## Technologies Used
 
